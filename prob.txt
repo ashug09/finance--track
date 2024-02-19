@@ -1,0 +1,1 @@
+how to take input from pre designed keypad in reactjs and not from system keypad
