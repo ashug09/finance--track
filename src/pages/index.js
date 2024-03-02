@@ -17,12 +17,12 @@ export default function Home() {
     return (
       <>
         <div className="mb-20">
-          <Mobile_nav />
           <Mobile_total_spending />
           <Mobile_piechart />
           <Mobile_group />
           <Mobile_category />
         </div>
+        <Mobile_nav />
       </>
     );
   }
