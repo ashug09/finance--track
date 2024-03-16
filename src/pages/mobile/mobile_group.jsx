@@ -1,8 +1,12 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import Mobile_add_group from "./mobile_add_group";
+import { useRouter } from "next/router";
 
 export default function Mobile_group() {
+  const router = useRouter()
   const [groups, setGroups] = React.useState([]);
+  const [isOpen, setIsOpen] = React.useState(false);
   useEffect(() => {
     const user = JSON.parse(sessionStorage.getItem("user"));
     console.log(user?.id);
@@ -12,6 +16,7 @@ export default function Mobile_group() {
       })
       .then((response) => {
         console.log(response?.data.data.allGroups);
+        console.log(response)
         setGroups(response?.data.data.allGroups);
       })
       .catch((error) => {
@@ -54,7 +59,10 @@ export default function Mobile_group() {
             </div>
           </div>
         ))}
-        <button className="bg-[#EED3D9] w-44 mx-2 m-2 p-3 rounded-2xl">
+        <button
+          onClick={() => router.push("/mobile/mobile_add_group")}
+          className="bg-[#EED3D9] w-44 mx-2 m-2 p-3 rounded-2xl"
+        >
           <h1 className="py-2 text-xl text-right">Add Group +</h1>
         </button>
       </div>
