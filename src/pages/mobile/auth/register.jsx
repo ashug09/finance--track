@@ -41,7 +41,8 @@ const Register = () => {
         .then((response) => {
           console.log(response.data);
           setShowPopup(true);
-          router.push("/")
+          router.push("/mobile/mobile_home");
+          sessionStorage.setItem("user", response.data.user);
         })
         .catch((error) => {
           console.log(error);

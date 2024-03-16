@@ -10,19 +10,14 @@ import Mobile_total_spending from "./mobile_total_spending";
 import Mobile_piechart from "./mobile/mobile_piechart";
 import Mobile_group from "./mobile/mobile_group";
 import Mobile_category from "./mobile/mobile_category";
+import SplashScreen from "./splashScreen";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   if (isMobile) {
     return (
       <>
-        <div className="mb-20">
-          <Mobile_total_spending />
-          <Mobile_piechart />
-          <Mobile_group />
-          <Mobile_category />
-        </div>
-      <Mobile_nav />
+        <SplashScreen/>
       </>
     );
   }

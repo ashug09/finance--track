@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 const LoginForm = () => {
-    const router = useRouter()
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
 
   const formik = useFormik({
@@ -28,7 +28,8 @@ const LoginForm = () => {
         })
         .then((response) => {
           console.log(response.data.finalUser);
-          router.push("/")
+          sessionStorage.setItem("user", JSON.stringify(response.data.finalUser));
+          router.push("/mobile/mobile_home");
         })
         .catch((error) => {
           console.log(error);
