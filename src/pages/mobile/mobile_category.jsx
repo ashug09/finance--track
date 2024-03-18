@@ -72,7 +72,7 @@ export default function Mobile_category() {
               router.push({
                 pathname: "/mobile/mobile_all_expenses",
                 query: {
-                  categoryId: category?._id,
+                  categoryId: category._id,
                   categoryName: category?.categoryName,
                 },
               })

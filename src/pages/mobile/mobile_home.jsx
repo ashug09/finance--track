@@ -14,7 +14,6 @@ export default function Mobile_home() {
         <Mobile_group />
         <Mobile_category />
       </div>
-      <Mobile_nav />
     </>
   );
 }
